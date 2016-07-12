@@ -9,7 +9,7 @@ export class TestHelper {
         this.builder = _builder;
     }
 
-    component(component, providers) {
+    component(component:any, providers:Array<Object> = []) {
         return this.builder
             .overrideProviders(component, providers)
             .createAsync(component)
