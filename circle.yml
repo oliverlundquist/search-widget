@@ -1,0 +1,4 @@
+test:
+  override:
+    - ./node_modules/karma/bin/karma start ./config/karma.conf.js --single-run
+    - cat ./build/lcov.info | ./node_modules/coveralls/bin/coveralls.js
